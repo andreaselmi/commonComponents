@@ -1,37 +1,78 @@
 @import "src/utils/theme/vars.module";
 @import "src/utils/theme/mixins";
 
-.container {
+.navbar {
   background-color: #2c3e50;
   color: white;
   display: flex;
   justify-content: space-between;
   padding: $spacing-md;
-  align-items: center;
-}
-
-.menu {
-  display: none;
-
-  & .menuList {
-    display: flex;
-
-    & li:not(:last-child) {
-      margin-right: $spacing-xl;
-    }
-
-    & li:hover {
-      color: deeppink;
-    }
-  }
 
   @include respond-to($desktopSmall) {
-    display: inline-block;
+    align-items: center;
+    padding: 0 $spacing-md;
+  }
+
+  & h1 {
+    z-index: 3;
+  }
+}
+
+.nav {
+  margin-left: -$spacing-md;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+  z-index: 2;
+  background-color: #2c3e50;
+
+  @include respond-to($desktopSmall) {
+    position: static;
+    max-height: 100% !important;
+  }
+}
+
+.nav {
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
+}
+
+.menuList {
+  display: block;
+  width: 100%;
+  background-color: #2c3e50;
+  padding: 6rem 0;
+
+  @include respond-to($desktopSmall) {
+    display: flex;
+    padding: 0;
+    justify-content: flex-end;
+  }
+
+  & li {
+    cursor: pointer;
+  }
+
+  & li h3 {
+    padding: $spacing-l;
+  }
+
+  & li:hover {
+    background-color: lighten(#2c3e50, 10%);
   }
 }
 
 .hamburgerIcon {
+  z-index: 3;
   @include respond-to($desktopSmall) {
     display: none;
   }
+}
+
+.navOpened {
+  max-height: 100%;
 }

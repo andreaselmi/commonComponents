@@ -1,23 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
 
 import styles from "./AnimatedHamburgerIcon.module.scss";
 
 interface AnimatedHamburgerIconProps {
   onToggle: (val: boolean) => void;
+  isOpened: boolean;
 }
 
-const AnimatedHamburgerIcon = ({ onToggle }: AnimatedHamburgerIconProps) => {
-  const [toggleIcon, setToggleIcon] = useState(false);
-
+const AnimatedHamburgerIcon = ({
+  isOpened,
+  onToggle,
+}: AnimatedHamburgerIconProps) => {
   return (
     <div
       className={styles.container}
       onClick={() => {
-        setToggleIcon((prevState) => !prevState);
-        onToggle(!toggleIcon);
+        onToggle(!isOpened);
       }}
     >
-      <div className={`${styles.hamburger} ${toggleIcon && styles.open}`} />
+      <div className={`${styles.hamburger} ${isOpened && styles.open}`} />
     </div>
   );
 };

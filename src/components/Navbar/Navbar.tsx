@@ -8,27 +8,36 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
   return (
-    <div className={styles.container}>
+    <header className={styles.navbar}>
       <Typography variant={"h1"}>LOGO</Typography>
 
-      <div className={styles.menu}>
+      <nav className={`${styles.nav} ${openMenu && styles.navOpened}`}>
         <ul className={styles.menuList}>
           <li>
-            <Link to={"/"}>Home</Link>
+            <Link to={"/"} onClick={() => setOpenMenu(false)}>
+              <Typography variant={"h3"}>Home</Typography>
+            </Link>
           </li>
           <li>
-            <Link to={"/accordion"}>Accordion</Link>
+            <Link onClick={() => setOpenMenu(false)} to={"/accordion"}>
+              <Typography variant={"h3"}>Accordion</Typography>
+            </Link>
           </li>
           <li>
-            <Link to={"/carousel"}>Carousel</Link>
+            <Link onClick={() => setOpenMenu(false)} to={"/carousel"}>
+              <Typography variant={"h3"}>Carousel</Typography>
+            </Link>
           </li>
         </ul>
-      </div>
+      </nav>
 
       <div className={styles.hamburgerIcon}>
-        <AnimatedHamburgerIcon onToggle={(val) => console.log(val)} />
+        <AnimatedHamburgerIcon
+          isOpened={openMenu}
+          onToggle={(val) => setOpenMenu(val)}
+        />
       </div>
-    </div>
+    </header>
   );
 };
 

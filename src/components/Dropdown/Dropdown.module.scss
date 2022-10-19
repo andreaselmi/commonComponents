@@ -1,0 +1,61 @@
+.container {
+  min-width: 18rem;
+  display: inline-block;
+  width: 100%;
+  position: relative;
+}
+
+.contentContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4.8rem;
+  border-radius: 0.4rem;
+  border: 0.05rem solid lightgreen;
+  padding: 0.8rem;
+}
+
+.activeContainer {
+  border: 0.1rem solid green;
+}
+
+.defaultText {
+  color: lightgrey;
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
+}
+
+.selectedText {
+  color: black;
+}
+
+// TODO add dynamically height
+.optionsContainer {
+  overflow: scroll;
+  max-height: 20rem;
+  position: absolute;
+  margin-top: 1.6rem;
+  width: 100%;
+  display: none;
+  box-shadow: 0 0.3rem 2rem rgba(0, 0, 0, 0.05);
+  background-color: white;
+  z-index: 999;
+
+  .option {
+    padding: 1.6rem;
+
+    &:hover {
+      background-color: lightgrey;
+    }
+  }
+}
+
+.showOptions {
+  display: inline-block;
+}
+.openTop {
+  top: -1.6rem;
+  transform: translateY(-100%);
+
+  margin-top: 0;
+}

@@ -1,0 +1,16 @@
+// spacing
+$screen-padding: 1.6rem; // 16px
+
+// breakpoints
+$tabletSmall: "tabletSmall";
+$tabletBig: "tabletBig";
+$desktopSmall: "desktopSmall";
+$desktopBig: "desktopBig";
+
+// divided by 16px (root font-size)
+$breakpoints: (
+  $tabletSmall: 36em,
+  $tabletBig: 48em,
+  $desktopSmall: 62em,
+  $desktopBig: 75em,
+) !default;

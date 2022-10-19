@@ -1,0 +1,23 @@
+@import "src/utils/theme/vars.module";
+@import "src/utils/theme/mixins";
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: $screen-padding $screen-padding 5rem;
+
+  //TODO check responsive padding
+
+  @include respond-to($tabletBig) {
+    max-width: 76.8rem; // 768px
+    padding: $screen-padding 0;
+  }
+
+  @include respond-to($desktopSmall) {
+    max-width: 99.2rem; // 992px
+  }
+
+  @include respond-to($desktopBig) {
+    max-width: 120rem; // 1200px
+  }
+}

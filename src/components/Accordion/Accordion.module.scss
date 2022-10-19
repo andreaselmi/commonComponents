@@ -7,7 +7,10 @@
 
 .accordion {
   overflow: hidden;
-  margin-bottom: 1rem;
+
+  &:not(:last-child) {
+    margin-bottom: $spacing-xl;
+  }
   & input {
     display: none;
   }
@@ -50,7 +53,7 @@
     padding: 1rem;
 
     @include respond-to($desktopSmall) {
-      max-height: 10rem;
+      max-height: 12rem;
     }
   }
 }

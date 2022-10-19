@@ -8,8 +8,6 @@ import styles from "./Accordion.module.scss";
 const Accordion = () => {
   return (
     <div className={styles.container}>
-      <Typography variant={"h3"}>Accordion</Typography>
-
       <div className={styles.accordion}>
         <input
           id={"item1"}
@@ -25,6 +23,17 @@ const Accordion = () => {
         <div className={`${styles.accordionContent}`}>
           <Typography variant={"p"}>
             If you want to know what a man’s like, take a good look at how he
+            treats his inferiors, not his equals. If you want to know what a
+            man’s like, take a good look at how he treats his inferiors, not his
+            equals. If you want to know what a man’s like, take a good look at
+            how he treats his inferiors, not his equals. If you want to know
+            what a man’s like, take a good look at how he treats his inferiors,
+            not his equals.If you want to know what a man’s like, take a good
+            look at how he treats his inferiors, not his equals. If you want to
+            know what a man’s like, take a good look at how he treats his
+            inferiors, not his equals. If you want to know what a man’s like,
+            take a good look at how he treats his inferiors, not his equals. If
+            you want to know what a man’s like, take a good look at how he
             treats his inferiors, not his equals.
           </Typography>
         </div>

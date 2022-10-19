@@ -4,11 +4,19 @@
 }
 
 .carousel {
+  min-width: 25rem;
+  min-height: 30rem;
+  width: 100%;
+  height: 100%;
   max-width: 50rem;
   max-height: 30rem;
   margin: 10rem auto 0;
   overflow: hidden;
   position: relative;
+  background-image: url("../../assets/images/orionthemes-placeholder-image.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .carouselItemContainer {
@@ -21,7 +29,9 @@
 .controlCarouselIcon {
   z-index: 999;
   position: absolute;
+  //next two lines to center
   top: 50%;
+  transform: translateY(-25%);
   width: 3.2rem;
   height: 3.2rem;
   display: flex;

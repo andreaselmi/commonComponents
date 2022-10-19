@@ -10,7 +10,9 @@ const TypographyExample = () => {
       <Typography variant={"h3"}>I&apos;m H3 Text</Typography>
       <Typography variant={"h4"}>I&apos;m H4 Text</Typography>
       <Typography variant={"p"}>I&apos;m p Text</Typography>
-      <Typography variant={"span"}>I&apos;m span Text</Typography>
+      <Typography variant={"span"}>
+        I&apos;m span Text with root font size
+      </Typography>
     </SamplePageWrapper>
   );
 };
